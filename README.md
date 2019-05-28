@@ -1,4 +1,4 @@
-# Web Socket 行情接口(2019-5-28)
+# DigiFinex Websocket接口(2019-5-28)
 # 基本信息
 * 本篇所列出的所有wss接口的baseurl为: **wss://stream.digifinex.com:9443**
 * 所有stream均可以直接访问，或者作为组合streams的一部分。
@@ -81,7 +81,7 @@
 ```
 
 ## 增量深度信息stream
-第一次会将历史信息推送过去，后续则推送增量
+第一次会将当前队列推送过去，后续则只推送增量
 每秒推送orderbook的变化部分（如果有）
 
 **Stream 名称:** \<symbol\>@depth
@@ -92,6 +92,7 @@
   "e": "depthUpdate", // 事件类型
   "E": 123456789,     // 事件时间
   "s": "BNBBTC",      // 交易对
+  "T": 0,             // 类型 0表示现有队列，1表示增量
   "U": 157,           // 从上次推送至今新增的第一个 update Id
   "u": 160,           // 从上次推送至今新增的最后一个 update Id
   "b": [              // 变动的买单深度
