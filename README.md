@@ -2,9 +2,17 @@
 > Version:1.0, Update: 2020-09-15, ©️Hotcoin
 
 
-## 前端规范
-### Ticker price
+## 团队角色
+### 产品规范
 
-* URL：`https://openapi.digifinex.vip/v2/ticker`
-* Request Method: GET
-* Request Parameters:
+* 产品设计文档需清晰明了
+* 产品逻辑不能有缺陷，否则完善后重新评审
+* app与web说明需统一
+* UI设计稿风格/规范需统一
+
+### 后端规范
+
+* 参数校验包括精度校验及其他校验
+* 返回数据需处理精度
+* 如有排序功能，则接口需要实现排序
+* 如需返回多语言的内容，只需返回键名
